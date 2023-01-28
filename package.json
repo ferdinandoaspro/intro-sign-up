@@ -1,0 +1,23 @@
+{
+  "name": "intro-sign-up",
+  "version": "1.0.0",
+  "description": "Frontend Mentor challenge",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferdinandoaspro/intro-sign-up.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ferdinandoaspro/intro-sign-up/issues"
+  },
+  "homepage": "https://github.com/ferdinandoaspro/intro-sign-up#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
