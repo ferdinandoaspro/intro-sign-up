@@ -647,6 +647,10 @@ video {
   background-repeat: no-repeat;
 }
 
+.bg-origin-content {
+  background-origin: content-box;
+}
+
 .px-\[10px\] {
   padding-left: 10px;
   padding-right: 10px;
