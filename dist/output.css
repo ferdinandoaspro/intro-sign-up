@@ -643,8 +643,16 @@ video {
   background-size: cover;
 }
 
+.bg-center {
+  background-position: center;
+}
+
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+
+.bg-origin-padding {
+  background-origin: padding-box;
 }
 
 .bg-origin-content {
