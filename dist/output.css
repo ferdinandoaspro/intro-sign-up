@@ -746,6 +746,10 @@ video {
     margin-bottom: 0px;
   }
 
+  .md\:grid {
+    display: grid;
+  }
+
   .md\:h-screen {
     height: 100vh;
   }
@@ -776,6 +780,10 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:place-items-center {
+    place-items: center;
   }
 
   .md\:justify-center {
