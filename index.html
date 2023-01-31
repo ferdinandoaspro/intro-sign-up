@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="./script/script.js" defer></script>
   <title>Frontend Mentor | Intro component with sign up form</title>
 </head>
 <body class="min-h-screen max-w-screen bg-mobile bg-center bg-repeat bg-red font-poppins 
@@ -35,7 +36,7 @@ md:bg-desktop md:grid md:place-items-center">
           <input type="email" id="email" name="email" placeholder="Email Address" required
           class="px-4 py-4 text-dark-blue border-[1px] rounded-md font-medium 
           placeholder:font-medium focus:outline-grayish-blue">
-          <input type="password" id="password" name="password" placeholder="Password" required
+          <input type="password" id="password" name="password" placeholder="Password" minlength="8" maxlength="24" required
           class="px-4 py-4 text-dark-blue border-[1px] rounded-md font-medium 
           placeholder:font-medium focus:outline-grayish-blue">
           <button class="bg-green py-4 active:opacity-60 rounded-md font-semibold">CLAIM YOUR FREE TRIAL</button>
