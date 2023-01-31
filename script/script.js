@@ -4,8 +4,7 @@ function returnErrorMessage(e) {
     let name = e.target.getAttribute("name");
 
     let errorStatus = document.createElement("span");
-    errorStatus.classList.add("flex", "flex-row", "gap-x-4");
-
+    errorStatus.classList.add("flex", "flex-row", "gap-x-1");
     e.target.after(errorStatus);
 
     let errorMessage = document.createElement("span");
@@ -14,12 +13,15 @@ function returnErrorMessage(e) {
 
     let errorIcon = document.createElement("span");
     errorIcon.setAttribute("data-id", name);
-    errorIcon.innerHTML = "<img src='./images/icon-error.svg' alt='' aria-hidden='true'>";
+    errorIcon.innerHTML = "<img class='w-[65%]' src='./images/icon-error.svg' alt='' aria-hidden='true'>";
 
-    if (e.target.value === "") {
+    if (e.target.value === "" || e.target.value === null) {
         errorMessage.innerText = `${e.target.getAttribute("placeholder")} cannot be empty.`;
     } else {
-        errorMessage.innerText = `Looks like this is not an ${e.target.getAttribute("placeholder")}.`;
+        if (e.target.getAttribute("name") === "email") {
+            errorMessage.innerText = `Looks like this is not an ${e.target.getAttribute("placeholder")}.`;
+        }
+        
     }
 
     errorStatus.appendChild(errorIcon);
