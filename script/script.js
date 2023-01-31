@@ -4,7 +4,7 @@ function returnErrorMessage(e) {
     let name = e.target.getAttribute("name");
 
     let errorStatus = document.createElement("span");
-    errorStatus.classList.add("flex", "flex-row");
+    errorStatus.classList.add("flex", "flex-row", "gap-x-4");
 
     e.target.after(errorStatus);
 
@@ -24,7 +24,7 @@ function returnErrorMessage(e) {
 
     errorStatus.appendChild(errorIcon);
     errorStatus.appendChild(errorMessage);
-}
+};
 
 inputs.forEach(input => {
     input.addEventListener("blur", () => {checkValidity()});

@@ -29,18 +29,24 @@ md:bg-desktop md:grid md:place-items-center">
         <form class="flex flex-col gap-y-4" action="#">
           <div>
             <input type="text" id="first_name" name="first_name" placeholder="First Name" required
-            class="px-4 py-4 text-dark-blue border-[1px] rounded-md font-medium w-[100%] 
+            class="px-4 py-4 text-dark-blue border-[1px] rounded-md font-medium w-full mb-1
             placeholder:font-medium focus:outline-grayish-blue">
           </div>
-          <input type="text" id="last_name" name="last_name" placeholder="Last Name" required
-          class="px-4 py-4 text-dark-blue border-[1px] rounded-md font-medium 
-          placeholder:font-medium focus:outline-grayish-blue">
-          <input type="email" id="email" name="email" placeholder="Email Address" required
-          class="px-4 py-4 text-dark-blue border-[1px] rounded-md font-medium 
-          placeholder:font-medium focus:outline-grayish-blue">
-          <input type="password" id="password" name="password" placeholder="Password" minlength="8" maxlength="24" required
-          class="px-4 py-4 text-dark-blue border-[1px] rounded-md font-medium 
-          placeholder:font-medium focus:outline-grayish-blue">
+          <div>
+            <input type="text" id="last_name" name="last_name" placeholder="Last Name" required
+            class="px-4 py-4 text-dark-blue border-[1px] rounded-md font-medium w-full mb-1
+            placeholder:font-medium focus:outline-grayish-blue">
+          </div>
+          <div>
+            <input type="email" id="email" name="email" placeholder="Email Address" required
+            class="px-4 py-4 text-dark-blue border-[1px] rounded-md font-medium w-full mb-1
+            placeholder:font-medium focus:outline-grayish-blue">
+          </div>
+          <div>
+            <input type="password" id="password" name="password" placeholder="Password" minlength="8" maxlength="24" required
+            class="px-4 py-4 text-dark-blue border-[1px] rounded-md font-medium w-full mb-1
+            placeholder:font-medium focus:outline-grayish-blue">
+          </div>
           <button class="bg-green py-4 active:opacity-60 rounded-md font-semibold">CLAIM YOUR FREE TRIAL</button>
         </form> 
         <p class="text-grayish-blue text-[0.7rem] leading-5 px-4">By clicking the button, you are agreeing to our <span class="text-red font-semibold">Terms and Services</span></p>
