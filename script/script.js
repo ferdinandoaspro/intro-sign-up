@@ -4,27 +4,26 @@ function returnErrorMessage(e) {
     let name = e.target.getAttribute("name");
 
     let errorStatus = document.createElement("span");
-    errorStatus.classList.add("flex", "flex-row", "gap-x-1");
+    errorStatus.classList.add("flex", "flex-row", "gap-x-1", "justify-end");
     e.target.after(errorStatus);
 
     let errorMessage = document.createElement("span");
     errorMessage.setAttribute("data-id", name);
     errorMessage.classList.add('text-red', "text-[0.7rem]");
 
-    let errorIcon = document.createElement("span");
-    errorIcon.setAttribute("data-id", name);
-    errorIcon.innerHTML = "<img class='w-[65%]' src='./images/icon-error.svg' alt='' aria-hidden='true'>";
-
     if (e.target.value === "" || e.target.value === null) {
         errorMessage.innerText = `${e.target.getAttribute("placeholder")} cannot be empty.`;
+        
     } else {
         if (e.target.getAttribute("name") === "email") {
             errorMessage.innerText = `Looks like this is not an ${e.target.getAttribute("placeholder")}.`;
+        } else {
+            errorMessage.innerText = `The ${e.target.getAttribute("placeholder")} is too weak.`;
         }
         
-    }
-
-    errorStatus.appendChild(errorIcon);
+    };
+    e.target.classList.add("invalid:bg-error", "invalid:bg-no-repeat", "invalid:bg-[center_right_1rem]",
+                            "invalid:border-red");
     errorStatus.appendChild(errorMessage);
 };
 

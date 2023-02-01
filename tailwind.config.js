@@ -18,7 +18,8 @@ module.exports = {
       },
       backgroundImage: {
         "mobile": "url('/images/bg-intro-mobile.png')",
-        "desktop": "url('/images/bg-intro-desktop.png')"
+        "desktop": "url('/images/bg-intro-desktop.png')",
+        "error": "url('/images/icon-error.svg')"
       }
     },
   },

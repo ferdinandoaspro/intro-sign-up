@@ -513,6 +513,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.relative {
+  position: relative;
+}
+
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -534,36 +538,12 @@ video {
   display: flex;
 }
 
-.h-\[50\] {
-  height: 50;
-}
-
-.h-\[50\%\] {
-  height: 50%;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-\[50\] {
-  width: 50;
-}
-
-.w-\[50\%\] {
-  width: 50%;
-}
-
-.w-\[60\%\] {
-  width: 60%;
-}
-
-.w-\[65\%\] {
-  width: 65%;
 }
 
 .flex-row {
@@ -574,16 +554,8 @@ video {
   flex-direction: column;
 }
 
-.content-center {
-  align-content: center;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.items-stretch {
-  align-items: stretch;
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-center {
@@ -606,18 +578,13 @@ video {
   row-gap: 1rem;
 }
 
-.gap-x-2 {
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
-}
-
 .gap-x-1 {
   -moz-column-gap: 0.25rem;
        column-gap: 0.25rem;
 }
 
-.self-center {
-  align-self: center;
+.justify-self-end {
+  justify-self: end;
 }
 
 .rounded-lg {
@@ -656,12 +623,24 @@ video {
   background-image: url('/images/bg-intro-mobile.png');
 }
 
+.bg-error {
+  background-image: url('/images/icon-error.svg');
+}
+
 .bg-center {
   background-position: center;
 }
 
+.bg-right {
+  background-position: right;
+}
+
 .bg-repeat {
   background-repeat: repeat;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .py-5 {
@@ -698,8 +677,8 @@ video {
   text-align: center;
 }
 
-.align-middle {
-  vertical-align: middle;
+.text-right {
+  text-align: right;
 }
 
 .font-poppins {
@@ -767,6 +746,31 @@ video {
 
 .placeholder\:font-medium::placeholder {
   font-weight: 500;
+}
+
+.invalid\:border-red:invalid {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 100% 74% / var(--tw-border-opacity));
+}
+
+.invalid\:bg-error:invalid {
+  background-image: url('/images/icon-error.svg');
+}
+
+.invalid\:bg-center:invalid {
+  background-position: center;
+}
+
+.invalid\:bg-right:invalid {
+  background-position: right;
+}
+
+.invalid\:bg-\[center_right_1rem\]:invalid {
+  background-position: center right 1rem;
+}
+
+.invalid\:bg-no-repeat:invalid {
+  background-repeat: no-repeat;
 }
 
 .focus\:outline-grayish-blue:focus {
