@@ -513,10 +513,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.relative {
-  position: relative;
-}
-
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -540,10 +536,6 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
-}
-
-.w-full {
-  width: 100%;
 }
 
 .flex-row {
@@ -583,10 +575,6 @@ video {
        column-gap: 0.25rem;
 }
 
-.justify-self-end {
-  justify-self: end;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -623,24 +611,12 @@ video {
   background-image: url('/images/bg-intro-mobile.png');
 }
 
-.bg-error {
-  background-image: url('/images/icon-error.svg');
-}
-
 .bg-center {
   background-position: center;
 }
 
-.bg-right {
-  background-position: right;
-}
-
 .bg-repeat {
   background-repeat: repeat;
-}
-
-.bg-no-repeat {
-  background-repeat: no-repeat;
 }
 
 .py-5 {
@@ -675,10 +651,6 @@ video {
 
 .text-center {
   text-align: center;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .font-poppins {
@@ -755,14 +727,6 @@ video {
 
 .invalid\:bg-error:invalid {
   background-image: url('/images/icon-error.svg');
-}
-
-.invalid\:bg-center:invalid {
-  background-position: center;
-}
-
-.invalid\:bg-right:invalid {
-  background-position: right;
 }
 
 .invalid\:bg-\[center_right_1rem\]:invalid {

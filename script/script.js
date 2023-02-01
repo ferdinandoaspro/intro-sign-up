@@ -1,4 +1,5 @@
 const inputs = document.querySelectorAll("input");
+const form = document.querySelector("form");
 
 function returnErrorMessage(e) {
     let name = e.target.getAttribute("name");
@@ -10,7 +11,7 @@ function returnErrorMessage(e) {
     let errorMessage = document.createElement("span");
     errorMessage.setAttribute("data-id", name);
     errorMessage.classList.add('text-red', "text-[0.7rem]");
-
+    errorStatus.appendChild(errorMessage);
     if (e.target.value === "" || e.target.value === null) {
         errorMessage.innerText = `${e.target.getAttribute("placeholder")} cannot be empty.`;
         
@@ -22,12 +23,26 @@ function returnErrorMessage(e) {
         }
         
     };
+
     e.target.classList.add("invalid:bg-error", "invalid:bg-no-repeat", "invalid:bg-[center_right_1rem]",
                             "invalid:border-red");
-    errorStatus.appendChild(errorMessage);
+    
 };
 
+function removeErrorMessage(e) {
+    
+    let errors = document.querySelectorAll(`[data-id="${e.target.getAttribute("name")}"]`);
+
+    errors.forEach(error => {
+        error.remove();
+    })
+
+    e.target.classList.remove("invalid:bg-error", "invalid:bg-no-repeat", "invalid:bg-[center_right_1rem]",
+    "invalid:border-red")
+}
+
 inputs.forEach(input => {
-    input.addEventListener("blur", () => {checkValidity()});
-    input.addEventListener("invalid", returnErrorMessage)
+    input.addEventListener("blur", () => {input.checkValidity()});
+    input.addEventListener("invalid", returnErrorMessage);
+    input.addEventListener("focus", removeErrorMessage)
 })
