@@ -1,7 +1,8 @@
 const inputs = document.querySelectorAll("input");
-const form = document.querySelector("form");
 
 function returnErrorMessage(e) {
+    removeErrorMessage(e);
+
     let name = e.target.getAttribute("name");
 
     let errorStatus = document.createElement("span");
